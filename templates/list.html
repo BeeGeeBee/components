@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}Component List{% endblock title %}
+{% block main %}
+<table border="1">
+    <tr>
+        <th>{{form.name.label}}</th>
+        <th>{{form.supplier.label}}</th>
+        <th>{{form.location.label}}</th>
+    </tr>
+    {% for row in range(numrows) %}
+    <tr>
+        <td>{{form.name.value[row]}}</td>
+        <td>{{form.supplier.value[row]}}</td>
+        <td>{{form.location.value[row]}}</td>
+    </tr>
+    {% endfor %}
+</table>
+<table border=1 style="width:100%">
+  <tr>
+    <th>Name</th>
+    <th colspan="2">Telephone</th>
+  </tr>
+  <tr>
+    <td>Bill Gates</td>
+    <td>555 77 854</td>
+    <td>555 77 855</td>
+  </tr>
+</table>
+{% endblock main %}

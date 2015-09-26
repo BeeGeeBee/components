@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+ 
+{% block main %}
+<table>
+    {% for cat in range(numcats) %}
+    <tr>
+        <td><a href="/categorysearch/{{categories.listorder[cat]}}/{{categories.id[cat]}}">->{{categories.name[cat]}}</a></td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
